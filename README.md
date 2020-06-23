@@ -5,6 +5,9 @@
 ##  Environment construction reference
 - https://qiita.com/madai0517/items/417063f924c0dfc27f3a
 
+## MySQLの8.0.14のコンテナにSequel Proで接続してみる
+https://breakthrough-tech.yuta-u.com/mysql/mysql-version-8-connection-by-sequel-pro/
+
 
 ## Ruby version
 - 2.7.1p83
