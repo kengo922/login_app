@@ -1,24 +1,19 @@
-# README
+# Abstract
+- Test new version and docker practice, login practice.
+- The login function is a review of the rails tutorial.(rails 6.0)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##  Environment construction reference
+- https://qiita.com/madai0517/items/417063f924c0dfc27f3a
 
-Things you may want to cover:
+## MySQLの8.0.14のコンテナにSequel Proで接続してみる
+https://breakthrough-tech.yuta-u.com/mysql/mysql-version-8-connection-by-sequel-pro/
 
-* Ruby version
 
-* System dependencies
+## Ruby version
+- 2.7.1p83
 
-* Configuration
+## Rails version
+- 6.0.3
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## MySQL version
+- 8.0
