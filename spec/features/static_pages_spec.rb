@@ -1,23 +1,25 @@
 require 'rails_helper'
 
-# Home画面をrootとしてそこにアクセスするテストに修正する
-describe 'Home' do
-  specify 'タイトル内容の表示' do
-    visit '/root' 
-    expect(page).to have_title 'Home | Ruby on Rails Tutorial Sample App'
-  end
-end
+RSpec.feature "Homes", type: :feature do
 
-describe 'Help' do
-  specify 'タイトル内容の表示' do
-    visit '/static_pages/help'
-    expect(page).to have_title 'Help | Ruby on Rails Tutorial Sample App'
-  end
-end
+  scenario "homeへページ遷移できるか" do
+    visit root_path
+    click_link "Home"
 
-describe 'About' do
-  specify 'タイトル内容の表示' do
-    visit '/static_pages/about'
-    expect(page).to have_title 'About | Ruby on Rails Tutorial Sample App'
+    expect(page).to have_content("Welcome to the Sample App")
+  end
+
+  scenario "aboutへページ遷移できるか" do
+    visit root_path
+    click_link "About"
+
+    expect(page).to have_content("Help Log in About")
+  end
+
+  scenario "helpへページ遷移できるか" do
+    visit root_path
+    click_link "Help"
+
+    expect(page).to have_content("Log in Help")
   end
 end
