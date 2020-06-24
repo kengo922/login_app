@@ -13,13 +13,21 @@ RSpec.feature "Homes", type: :feature do
     visit root_path
     click_link "About"
 
-    expect(page).to have_content("Help Log in About")
+    expect(page).to have_content("About")
   end
 
   scenario "helpへページ遷移できるか" do
     visit root_path
     click_link "Help"
 
-    expect(page).to have_content("Log in Help")
+    expect(page).to have_content("Help")
   end
+
+  scenario "contactへページ遷移できるか" do
+    visit root_path
+    click_link "Contact"
+
+    expect(page).to have_content("Contact")
+  end
+
 end
