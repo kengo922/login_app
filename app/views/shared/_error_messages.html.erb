@@ -1,0 +1,17 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      入力ミスが <%= pluralize(@user.errors.count, "個あります") %>.
+    </div>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%# 詳しくは7章を参照 %>
+<%# countメソッド。エラーの数を返す。 %>
+<%# any?メソッドはちょうどempty?と逆の動作で、要素が1つでもある場合はtrue、ない場合はfalseを返します。 %>
+<%# pluralizeの最初の引数に整数が与えられると、それに基づいて2番目の引数の英単語を複数形に変更したものを返します。 %>

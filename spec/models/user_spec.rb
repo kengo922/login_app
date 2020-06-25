@@ -34,6 +34,7 @@ RSpec.describe User, type: :model do
     it "一意性が正しく機能しているか" do
       #@userを複製してduplicate_userに格納
       duplicate_user = @user.dup
+      # dupは、同じ属性を持つデータを複製するためのメソッド
       #@userのemailを大文字でduplicate_userのemailに格納
       duplicate_user.email = @user.email.upcase
       @user.save!
