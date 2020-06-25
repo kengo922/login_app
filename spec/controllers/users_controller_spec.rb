@@ -9,4 +9,12 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  describe "エラーメッセージの確認" do
+    it "空白でないこと" do
+        user = User.new()
+        user.valid?
+        expect(user.errors.messages[:name]).to include("を入力してください")
+    end
+
+  end
 end

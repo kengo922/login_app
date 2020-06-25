@@ -11,8 +11,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)    # 実装は終わっていないことに注意!
     if @user.save
+      log_in @user
       flash[:success] = "ようこそ、サンプルアププへ！"
-      redirect_to @user
+      redirect_to "/users/#{user.id}"
       # 保存の成功をここで扱う。
     else
       render 'new'
