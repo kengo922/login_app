@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # ユーザーログイン後にユーザー情報のページにリダイレクトする
       log_in(user) 
-      redirect_to "/users/#{user.id}"
+      redirect_to @user
+      # redirect_to "/users/#{user.id}"
     else
       flash.now[:danger] = 'メールアドレス/パスワードの組み合わせが無効です'
       # flash.nowは、更新されたらメッセージが消滅する

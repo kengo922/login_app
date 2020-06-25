@@ -13,7 +13,8 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "ようこそ、サンプルアププへ！"
-      redirect_to "/users/#{user.id}"
+      # redirect_to "/users/#{user.id}"
+      redirect_to @user
       # 保存の成功をここで扱う。
     else
       render 'new'

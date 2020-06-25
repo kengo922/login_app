@@ -10,7 +10,6 @@ RSpec.describe "UsersApi", type: :request do
     get signup_path
   end
 
-
   describe "users#<create>" do
     it "postデータの受け取りができること" do
       post users_path, params: {user: params}
