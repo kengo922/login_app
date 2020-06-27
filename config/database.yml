@@ -6,7 +6,6 @@ default: &default
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['MYSQL_HOST'] %>
 
-  
 development:
   <<: *default
   database: myapp_development
