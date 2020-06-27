@@ -13,7 +13,7 @@ jobs:
           MYSQL_HOST: 127.0.0.1
           MYSQL_USERNAME: ${DB_USER}
           MYSQL_PASSWORD: ${DB_PASSWORD}
-          MYSQL_PORT: 3306
+          MYSQL_PORT: 4306
           BUNDLER_VERSION: 2.1.4
       - image: circleci/mysql:8.0
         environment:
