@@ -13,7 +13,7 @@ jobs:
           MYSQL_HOST: 127.0.0.1
           MYSQL_USERNAME: 'myapp'
           MYSQL_PASSWORD: 'myapp_password'
-          MYSQL_PORT: 4306
+          MYSQL_PORT: 3306
           BUNDLER_VERSION: 2.1.4
       - image: circleci/mysql:8.0
         environment:
@@ -51,7 +51,7 @@ jobs:
       # Database setup
       - run:
           name: waiting for stating database
-          command: dockerize -wait tcp://127.0.0.1:4306 -timeout 1m
+          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
 
