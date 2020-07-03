@@ -8,19 +8,11 @@ default: &default
 
 development:
   <<: *default
-  host: <%= Rails.application.credentials.rds[:host] %>
-  database: <%= Rails.application.credentials.rds[:database] %>
-  username: <%= Rails.application.credentials.rds[:username] %>
-  password: <%= Rails.application.credentials.rds[:password] %>
-  port: <%= Rails.application.credentials.rds[:port] %>
+  database: myapp_development
 
 test:
   <<: *default
-  host: <%= Rails.application.credentials.rds[:host] %>
-  database: <%= Rails.application.credentials.rds[:database] %>
-  username: <%= Rails.application.credentials.rds[:username] %>
-  password: <%= Rails.application.credentials.rds[:password] %>
-  port: <%= Rails.application.credentials.rds[:port] %>
+  database: myapp_test
 
   production:
     <<: *default
