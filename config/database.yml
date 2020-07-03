@@ -21,4 +21,3 @@ test:
     username: <%= Rails.application.credentials.rds[:username] %>
     password: <%= Rails.application.credentials.rds[:password] %>
     port: <%= Rails.application.credentials.rds[:port] %>
-    socket: /var/run/mysqld/mysqld.sock
